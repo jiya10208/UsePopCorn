@@ -19,6 +19,7 @@ StarRating.propTypes = {
   className: PropTypes.string,
   onSetRating: PropTypes.func,
 };
+
 export default function StarRating({
   maxRating = 5,
   color = "#fcc419",
@@ -30,6 +31,7 @@ export default function StarRating({
 }) {
   const [rating, SetRating] = useState(defaultRating);
   const [tempRating, setTemprating] = useState(0);
+
   function HandleRating(rating) {
     SetRating(rating);
     onSetRating(rating);
@@ -66,6 +68,7 @@ export default function StarRating({
     </div>
   );
 }
+
 function Star({ onrate, full, onHoveringIn, onHoveringOut, color, size }) {
   const starStyle = {
     width: `${size}px `,
